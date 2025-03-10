@@ -1,4 +1,5 @@
 <template>
-    <header class="bg-primary w-100" style="height: 40px;"></header>
+   <nav class="navbar navbar-expand-lg " style="background-color: #0d6efd;">
+</nav>
   </template>
   

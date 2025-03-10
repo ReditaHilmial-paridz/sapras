@@ -1,9 +1,6 @@
 <template>
   <div class="d-flex flex-column vh-100 sidebar">
     <!-- Sidebar Header -->
-    <div class="sidebar-header p-3 text-white bg-primary">
-      <h5 class="mb-0">Menu</h5>
-    </div>
 
     <!-- Sidebar Menu -->
     <ul class="nav flex-column mt-2">
@@ -42,6 +39,7 @@
 </template>
 
 <script setup>
+
 import { ref } from 'vue';
 
 // Daftar menu sidebar
@@ -50,7 +48,12 @@ const menuItems = ref([
   { name: 'Manajemen Akun', path: '/akun', icon: 'bi bi-person' },
   { name: 'Fasilitas', path: '/fasilitas', icon: 'bi bi-hdd-stack' },
   { name: 'Petugas', path: '/petugas', icon: 'bi bi-people' },
-  { name: 'Data Siswa', path: '/siswa', icon: 'bi bi-person-lines-fill' },
+  { name: 'Data Siswa', icon: 'bi bi-person-lines-fill' ,
+    children: [
+        { name: 'Data Siswa', path: '/datasiswa/datasiswa', icon: 'bi bi-file-earmark-text' },
+        { name: 'Edit Siswa', path: '/datasiswa/editsiswa', icon: 'bi bi-file-earmark-text' }
+      ]
+    },
   { 
     name: 'Arsip', 
     icon: 'bi bi-archive',
